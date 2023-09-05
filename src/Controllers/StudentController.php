@@ -21,7 +21,16 @@
         }
 
         public function store(Request $request) {
-            $student = Student::create($request->request->all());
+            #if have value put. no value put default
+            $data = [
+                "name" => !$request->request->get('name') == '' ?  $request->request->get('name'): 'Unknown',
+                "email" => !$request->request->get('email') == '' ? $request->request->get('email'): 'Unknown',
+                "gender" => $request->request->get('gender') ?? 'Others',
+                "dob" => !$request->request->get('dob') == '' ? $request->request->get('dob'): '2000-01-01',
+                "age" => !$request->request->get('age') == '' ? $request->request->get('age'): '24',
+            ];
+            
+            $student = Student::create($data);
             if ($student) return redirect("/students");
         }
         #create section ends
@@ -39,7 +48,16 @@
         }
         
         public function update(Request $request) {
-            $student = Student::where('id', $request->request->get('id'))->update($request->request->all());
+            #if have value put. no value put default
+            $data = [
+                "name" => !$request->request->get('name') == '' ?  $request->request->get('name'): 'Unknown',
+                "email" => !$request->request->get('email') == '' ? $request->request->get('email'): 'Unknown',
+                "gender" => $request->request->get('gender') ?? 'Others',
+                "dob" => !$request->request->get('dob') == '' ? $request->request->get('dob'): '2000-01-01',
+                "age" => !$request->request->get('age') == '' ? $request->request->get('age'): '24',
+            ];
+
+            $student = Student::where('id', $request->request->get('id'))->update($data);
             if ($student) return redirect("/student/{$request->request->get('id')}");
         }
         #update section ends

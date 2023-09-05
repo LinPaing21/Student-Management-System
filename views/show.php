@@ -15,8 +15,8 @@
                         <li class="list-group-item">ID: <?php echo $student->id ?></li>
                         <li class="list-group-item">Name: <?php echo $student->name ?></li>
                         <li class="list-group-item">Email: <?php echo $student->email ?></li>
-                        <li class="list-group-item">Email: <?php echo $student->gender ?></li>
-                        <li class="list-group-item">Email: <?php echo $student->dob ?></li>
+                        <li class="list-group-item">Gender: <?php echo $student->gender ?></li>
+                        <li class="list-group-item">DateOfBirth: <?php echo $student->dob ?></li>
                         <li class="list-group-item">Age: <?php echo $student->age?></li>
                     </ul>
                     <div class="btn-group mt-3" role="group" aria-label="Basic mixed styles example">

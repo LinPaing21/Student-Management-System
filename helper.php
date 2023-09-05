@@ -7,8 +7,6 @@
     use Symfony\Component\Templating\Helper\SlotsHelper;
     use Symfony\Component\Templating\TemplateNameParser;
 
-
-
     function view($file_name, $data = []) {
 
         $filesystemLoader = new FilesystemLoader(__DIR__.'/views/%name%');
