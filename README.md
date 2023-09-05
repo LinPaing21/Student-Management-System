@@ -7,6 +7,7 @@ First your need to clone or download my repo,
 
 ```
 git clone https://github.com/LinPaing21/Student-Management-System.git
+cd Student-Management-System
 composer install
 cp database-example.php database.php
 ```
