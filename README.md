@@ -22,6 +22,7 @@ CREATE TABLE `students` (
     `gender` CHAR(6) NOT NULL,
     `dob` DATE NOT NULL,
     `age` TINYINT UNSIGNED
+);
 ```
 
 ```
