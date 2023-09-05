@@ -49,7 +49,7 @@
                         </div>
 
                         <button type="submit" class="btn btn-primary mt-3">Update</button>
-                        <a href="show/<?php echo $student->id ?>" class="btn btn-danger mt-3">Cancel</a>
+                        <a href="/student/<?php echo $student->id ?>" class="btn btn-danger mt-3">Cancel</a>
 
                     </form>
                 <?php else: ?>
